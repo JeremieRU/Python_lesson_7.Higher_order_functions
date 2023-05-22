@@ -26,12 +26,15 @@ for i in range(len(chant)):
             k += 1
     wordsvowels.append(k)
 
-answ = 1
-for i in range(1, len(wordsvowels)):
-    if wordsvowels[i] != wordsvowels[0]:
-        answ = 0
-        break
-if answ == True:
-    print("Парам пам-пам")
+if len(wordsvowels) < 2:
+    print("Невозможно проверить кричалку из одного слова!")
 else:
-    print("Пам парам")
+    answ = 1
+    for i in range(1, len(wordsvowels)):
+        if wordsvowels[i] != wordsvowels[0]:
+            answ = 0
+            break
+    if answ == True:
+        print("Парам пам-пам")
+    else:
+        print("Пам парам")
